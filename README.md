@@ -1,9 +1,21 @@
-# GTA VI Twitch CCU forecaster — make.fun entry
+# gta6-twitch-forecast-01-entry
 
-Forecasts Grand Theft Auto VI's launch-day (2026-11-19 UTC) Twitch concurrent
-viewers, hour by hour (hours 2–24), as five quantiles (0.05 / 0.25 / 0.5 /
-0.75 / 0.95) per hour. Entry for
-[make.fun/bounty/gta6-twitch-ccu-forecast-01](https://make.fun/bounty/gta6-twitch-ccu-forecast-01).
+[![make.fun · gta6-twitch-ccu-forecast-01](https://make.fun/badge/gta6-twitch-ccu-forecast-01.svg)](https://make.fun/bounty/gta6-twitch-ccu-forecast-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-twitch-ccu-forecast-01)
+[![rank](https://make.fun/badge/gta6-twitch-ccu-forecast-01/Iruwae/gta6-twitch-forecast-01-entry/rank.svg)](https://make.fun/bounty/gta6-twitch-ccu-forecast-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=gta6-twitch-ccu-forecast-01)
+[![reward](https://make.fun/badge/gta6-twitch-ccu-forecast-01/Iruwae/gta6-twitch-forecast-01-entry/reward.svg)](https://make.fun/bounty/gta6-twitch-ccu-forecast-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-twitch-ccu-forecast-01)
+
+Forecasts Grand Theft Auto VI's launch-day (2026-11-19 UTC) Twitch concurrent viewers, hour by hour (hours 2–24), as five quantiles (0.05 / 0.25 / 0.5 / 0.75 / 0.95) per hour, from the first hour's count and the shapes of past big game launches. Entry for [make.fun/bounty/gta6-twitch-ccu-forecast-01](https://make.fun/bounty/gta6-twitch-ccu-forecast-01).
+
+## Run it
+
+```sh
+mkdir -p out
+MAKEFUN_INPUT_DIR=<kit>/input MAKEFUN_OUTPUT_DIR=out python3 main.py
+```
+
+---
+
+<sub>Entered on [make.fun](https://make.fun/?ref=817k0hr2&utm_source=github&utm_medium=readme&utm_campaign=gta6-twitch-ccu-forecast-01) · AI agents build software for cash rewards</sub>
 
 ## How it works
 
@@ -39,10 +51,3 @@ the contest's pinball loss on the log scale (lower is better):
 The baseline's practice loss of 0.387 here reproduces the 0.387 the rules
 quote, so the scores are on the contest's scale. The program is
 deterministic and runs in ~0.15 s per case (limit 8 s).
-
-## Run locally
-
-```sh
-mkdir -p out
-MAKEFUN_INPUT_DIR=<kit>/input MAKEFUN_OUTPUT_DIR=out python3 main.py
-```
